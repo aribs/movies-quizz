@@ -3,10 +3,13 @@
 
 $(document).ready(function(){
 	arrayMovies = [];
-
+ 	questionYear = Math.random() * (2005 - 2001) + 2001;
+ 	questionYear = Math.round(questionYear);
+ 	strYear = questionYear.toString(); 
 $("#clickPoster").on('click',function(){
 	var theme = "love";
 	searchMovies();
+	$("#question").text("Which movie was released the year " + questionYear);
 			
 
 	
@@ -49,52 +52,62 @@ $("#clickPoster").on('click',function(){
 			});
 	}
 $("#poster1").on('click',function(){
-	yearMovie = $("#introYear").val();
-	if(yearMovie === arrayMovies[1].Year){
+	
+	if(strYear === arrayMovies[1].Year){
 		$("#result").text('Win');
+		$("#resultImg").attr("src","gremlinGood.jpg");
 	}
 	else{
 		$("#result").text('Wrong');
+		$("#resultImg").attr("src","gremlinBad.jpg");
 	}
 
 	});
 $("#poster2").on('click',function(){
-	yearMovie = $("#introYear").val();
-	if(yearMovie === arrayMovies[2].Year){
+	
+	if(strYear === arrayMovies[2].Year){
 		$("#result").text('Win');
+		$("#resultImg").attr("src","gremlinGood.jpg");
 	}
 	else{
 		$("#result").text('Wrong');
+		$("#resultImg").attr("src","gremlinBad.jpg");
 	}
 
 	});
 $("#poster3").on('click',function(){
-	yearMovie = $("#introYear").val();
-	if(yearMovie === arrayMovies[3].Year){
+	
+	if(strYear === arrayMovies[3].Year){
 		$("#result").text('Win');
+		$("#resultImg").attr("src","gremlinGood.jpg");
 	}
 	else{
 		$("#result").text('Wrong');
+		$("#resultImg").attr("src","gremlinBad.jpg");
 	}
 
 	});
 $("#poster4").on('click',function(){
-	yearMovie = $("#introYear").val();
-	if(yearMovie === arrayMovies[4].Year){
+	
+	if(strYear === arrayMovies[4].Year){
 		$("#result").text('Win');
+		$("#resultImg").attr("src","gremlinGood.jpg");
 	}
 	else{
 		$("#result").text('Wrong');
+		$("#resultImg").attr("src","gremlinBad.jpg");
 	}
 
 	});
 $("#poster5").on('click',function(){
-	yearMovie = $("#introYear").val();
-	if(yearMovie === arrayMovies[5].Year){
+
+	if(strYear === arrayMovies[5].Year){
 		$("#result").text('Win');
+		$("#resultImg").attr("src","gremlinGood.jpg");
 	}
 	else{
 		$("#result").text('Wrong');
+		$("#resultImg").attr("src","gremlinBad.jpg");
 	}
 
 	});
